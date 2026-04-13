@@ -185,6 +185,7 @@ h2 {
 .company {
     background-color: #ffffff;
     padding: 30px;
+    position: relative;
 }
 
 .info {
@@ -211,9 +212,12 @@ dd {
     aspect-ratio: 6/7;
     object-fit: cover;
     vertical-align: bottom;
+
+    margin-top: 30px;
     margin-top: 30px;
     background-color: #f0ebebe8;
-    box-shadow: 0 0 0 8vw #f0ebebe8;
+    box-shadow: 0 0 0 10vw #f0ebebe8;
+    /* 画像に背景をつけてボックスシャドウという形で出現させて背景としている */
 }
 
 .last_logo {
@@ -229,6 +233,16 @@ dd {
 .copy_right {
     font-size: 0.8rem;
 }
+
+
+
+
+
+
+
+
+
+
 
 /* デスクトップ用 */
 @media(min-width:900px) {
@@ -338,6 +352,7 @@ dd {
         max-width: 1000px;
         margin: 0 auto;
         overflow-x: hidden;
+        /* 横方向にはみ出した部分を隠して、横スクロールを禁止する */
     }
 
     .bus {
@@ -361,11 +376,11 @@ dd {
     .bus_list {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 40px 60px;
-        align-items: start;
-        max-width: 1000px;
         width: 100%;
+        max-width: 1000px;
+        align-items: start;
         margin: 0 auto;
+        gap: 40px 60px;
     }
 
     .list {
@@ -381,14 +396,19 @@ dd {
 
     .list:nth-child(2),
     .list:nth-child(4) {
-        transform: translateY(-100px);
+        margin-top: -100px;;
     }
+
+/* 会社情報 */
+
+
 
     .company {
         max-width: 60%;
         height: auto;
         position: relative;
         overflow: visible;
+        /* 要素の枠（サイズ）からはみ出した中身を、隠さずにそのまま表示する */
         padding: 20px 50px 20px 50px;
         background-color: #ffffff;
     }
@@ -396,23 +416,29 @@ dd {
     .last_img {
         width: 600px;
         height: auto;
-        aspect-ratio: 5 / 4;
-        vertical-align: bottom;
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
         right: -380px;
+        top: 100px;
         z-index: 1;
         object-fit: cover;
         box-shadow: none;
+        aspect-ratio: 5 / 4;
     }
 
+
+    /* フッター */
+
     .footer {
+        display: flex;
+        flex-direction: column;
         background-color: #ffffff;
         margin-top: 50px;
         padding: 30px 30px 30px 100px;
-        display: flex;
-        flex-direction: column;
+    }
+
+    .logo {
+        margin: 8px 0;
+        padding: 0px;
     }
 
     .footer_last_info {
@@ -423,5 +449,10 @@ dd {
 
     .last_info {
         line-height: 1.5;
+ 
+    }
+
+    .copy_right{
+        font-size: 1.3rem;
     }
 }
