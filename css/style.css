@@ -11,7 +11,6 @@ body {
     background-color: #f0ebebe8;
     font-size: 2rem;
     font-style: normal;
-    /* 修正：URLパラメータ形式から正規のフォント名指定へ修正 */
     font-family: 'Noto Sans JP', sans-serif;
     box-sizing: border-box;
     display: flex;
@@ -22,7 +21,7 @@ body {
     padding: 16px;
 }
 
-.eng-language {
+.eng_language {
     letter-spacing: 0.2em;
 }
 
@@ -70,7 +69,7 @@ h1 {
     margin: 20px 10px 30px 10px;
 }
 
-.nav-menu {
+.nav_menu {
     display: flex;
     justify-content: space-around;
     line-height: 1;
@@ -87,7 +86,7 @@ h2 {
 }
 
 /* 写真 */
-.main-img {
+.main_img {
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -96,7 +95,7 @@ h2 {
     vertical-align: bottom;
 }
 
-.about-img {
+.about_img {
     width: 100vw;
     margin-left: -16px;
     margin-right: -16px;
@@ -115,7 +114,7 @@ h2 {
     margin: 50px 0px 20px;
 }
 
-.sub-title {
+.sub_title {
     display: inline-block;
     width: 28%;
     border-bottom: 1px solid #000000;
@@ -124,7 +123,7 @@ h2 {
     font-size: 1.3rem;
 }
 
-.news-title {
+.news_title {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -132,12 +131,12 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-.heading-title {
+.heading_title {
     display: block;
     margin-top: 1.5rem;
 }
 
-.news-title span {
+.news_title span {
     display: inline-block;
     background-color: #000000;
     color: #ffffff;
@@ -154,13 +153,13 @@ h2 {
     margin: 30px 10px 80px 10px;
 }
 
-.main-text {
+.main_text {
     line-height: 3rem;
     font-size: 1.5rem;
 }
 
 /* BUSINESS */
-.bus-img {
+.bus_img {
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -173,7 +172,6 @@ h2 {
     font-size: 1.5rem;
     padding: 1rem;
     position: relative; 
-    /* Before要素の基準のため追加 */
 }
 
 .list::before {
@@ -183,7 +181,7 @@ h2 {
     left: 0;
     color: #000000;
     font-weight: bold;
-    margin-left: 0; /* 位置調整 */
+    margin-left: 0;
 }
 
 /* 会社情報 */
@@ -204,12 +202,12 @@ dd {
     margin-bottom: 20px;
 }
 
-.com-list {
-    line-height: 0.5;
+.com_list {
+    line-height: 1;
 }
 
 /* フッター */
-.last-img {
+.last_img {
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -221,26 +219,19 @@ dd {
     box-shadow: 0 0 0 8vw #f0ebebe8;
 }
 
-
-.last-logo {
+.last_logo {
     margin-left: 0;
     margin-bottom: 1rem;
 }
 
-.last-info {
+.last_info {
     font-size: 1.3rem;
     margin-bottom: 30px;
 }
 
-.copy-right {
+.copy_right {
     font-size: 1.1rem;
 }
-
-
-
-
-
-
 
 /* デスクトップ用 */
 @media(min-width:900px) {
@@ -253,7 +244,7 @@ dd {
         padding: 0px;
     }
 
-    .main-nav {
+    .main_nav {
         display: flex;
     }
 
@@ -264,7 +255,7 @@ dd {
         padding: 5px;
     }
 
-    .nav-menu {
+    .nav_menu {
         align-items: flex-end;
         padding-bottom: 15px;
         gap: 10px;
@@ -286,22 +277,20 @@ dd {
         text-decoration: none;
     }
 
-    .main-img {
+    .main_img {
         aspect-ratio: 16 / 9;
         max-height: 90vh;
         object-fit: cover;
     }
 
-
     /* ニュース */
-
     .news {
         display: flex;
         margin: 5% 10% 10% 10%;
         gap: 10px;
     }
 
-    .news-title {
+    .news_title {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -323,7 +312,7 @@ dd {
         border: none;
     }
 
-    .heading-title {
+    .heading_title {
         display: block;
         padding: 1.5rem;
         padding-left: 0rem;
@@ -332,13 +321,13 @@ dd {
     }
 
     /* ABOUT */
-    .about-img {
+    .about_img {
         width: 50%;
         aspect-ratio: 7 / 4;
         max-height: 60vh;
     }
 
-    .about-box {
+    .about_box {
         display: flex;
     }
 
@@ -347,13 +336,12 @@ dd {
         padding-top: 10%;
     }
 
-
     /* BUSINESS */
-  .bus_com_wrapper{
-    max-width: 1000px;
-    margin: 0 auto;
+    .bus_com_wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+        overflow-x: hidden;
     }
-
 
     .bus {
         width: 100%;
@@ -361,11 +349,11 @@ dd {
         justify-content: center;
     }
 
-    .bus-top {
-      margin-bottom: 30px;
+    .bus_top {
+        margin-bottom: 30px;
     }
 
-    .bus-img {
+    .bus_img {
         width: 400px;
         height: auto;
         aspect-ratio: 5 / 3;
@@ -373,7 +361,7 @@ dd {
         padding-top: 5px;
     }
 
-    .bus-list {
+    .bus_list {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px 60px;
@@ -390,7 +378,6 @@ dd {
         padding-bottom: 5px;
     }
 
-    /* リスト要素の疑似要素を非表示にする設定の継承 */
     .list::before {
         display: none;
     }
@@ -401,16 +388,15 @@ dd {
     }
 
     .company {
+        max-width: 60%;
+        height: auto;
         position: relative;
         overflow: visible;
-        max-width: 50%;
-        height: auto;
-        margin: 0 100px;
-        padding: 50px;
+        padding: 20px 50px 20px 50px;
         background-color: #ffffff;
     }
 
-    .last-img {
+    .last_img {
         width: 600px;
         height: auto;
         aspect-ratio: 5 / 4;
@@ -421,8 +407,7 @@ dd {
         right: -380px;
         z-index: 1;
         object-fit: cover;
-        box-shadow: 0 0 0 0vw ;
-}
+        box-shadow: none;
     }
 
     .footer {
@@ -433,12 +418,13 @@ dd {
         flex-direction: column;
     }
 
-    .footer-last-info {
+    .footer_last_info {
         display: flex;
         justify-content: space-between;
         margin-right: 10%;
     }
 
-    .last-info {
+    .last_info {
         line-height: 1.5;
     }
+}
