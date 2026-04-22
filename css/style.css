@@ -14,6 +14,7 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
     box-sizing: border-box;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -170,10 +171,10 @@ time::after {
 
 
 .bus_img {
-    width: 1000px;
+    max-width: 1000px;
     height: auto;
     vertical-align: bottom;
-    margin: 20px 0;
+    margin: 20px 0 40px 0;
 }
 
 .bus_list li {
@@ -235,7 +236,7 @@ time::after {
 }
 
 /* フッター */
-.footer {
+.footer_wrapper {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
@@ -416,19 +417,17 @@ time::after {
         margin: 0 auto;
         gap: 40px 60px;
         grid-template-areas:
+            /* セルは2列 */
+            "......  area_b"
+            /* 1行目 */
+            "area_a  area_b"
+            /* 2行目 */
+            "area_a  area_d"
+            /* 3行目 */
+            "area_c  area_d"
+            /* 4行目 */
+            "area_c  .....";
 
-            "...... area_b"
-            "...... area_b"
-            "area_a area_b"
-            /* 1行目：左にa、右は空き */
-            "area_a area_d"
-            /* 2行目：左にa、右にb */
-            "area_c area_d"
-            /* 3行目：左にc、右にb */
-            "area_c area_d"
-            /* 4行目：左にc、右にd */
-            "...... area_d";
-        /* 5行目：左は空き、右にd */
     }
 
     .area_a {
